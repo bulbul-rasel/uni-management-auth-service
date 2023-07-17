@@ -1,5 +1,8 @@
-import express, { Application, Request, Response } from "express";
+import express, { Application, NextFunction, Request, Response } from "express";
 import cors from "cors";
+
+import { UserRoutes } from "./app/modules/user/user.route";
+import globalErrorHandler from "./app/middlewares/globalErrorHandler";
 const app: Application = express();
 const port = 3000;
 
@@ -9,8 +12,17 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
+// Application router
+app.use("/api/v1/users/", UserRoutes);
+
+// testing
+app.get("/", (req: Request, res: Response, next: NextFunction) => {
+  throw new Error("Oree baba error");
+  // next("Oree Next level Error");
 });
+
+// global error handler
+
+app.use(globalErrorHandler);
 
 export default app;

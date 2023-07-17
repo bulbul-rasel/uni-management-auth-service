@@ -1,0 +1,65 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\.e8289a9c469d230dd63aa13a7195a636f98781a2-audit.json",
+    "files": [
+        {
+            "date": 1689184470185,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-12-07-23-success.log",
+            "hash": "349f574970abfd83ed92db3723832f29fff06f6aa1b99aff5e390fff991e13c7"
+        },
+        {
+            "date": 1689264236667,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-13-07-22-success.log",
+            "hash": "4c2a3c0ade1c051233da450b36385ea02fd6928bf6bdeae4c17bcd1aa3bd2361"
+        },
+        {
+            "date": 1689331329158,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-14-07-16-success.log",
+            "hash": "aba6768b973db6d168ff6953df0b77a8231506ecf503b8a7b37c4c77dbd86501"
+        },
+        {
+            "date": 1689332864004,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-14-07-17-success.log",
+            "hash": "ccdc3046b696a3076302e5bbe0cdf828e9570a676eb979d9aee2a363b300f78c"
+        },
+        {
+            "date": 1689520254183,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-16-07-21-success.log",
+            "hash": "1f0bcaa972278aa2bc1ec838185ce299d05f7d1247c052f928450c6a9796639b"
+        },
+        {
+            "date": 1689529274001,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-16-07-23-success.log",
+            "hash": "a4965ed9cb9c5895f35c85a44d78d779c6093342fa390ea64d093e3a6034c330"
+        },
+        {
+            "date": 1689530508418,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-17-07-00-success.log",
+            "hash": "c5b6358fcf7b016d4dbdb3b205f3211fc4e019329aea49f5ba6a744de71461a0"
+        },
+        {
+            "date": 1689609247896,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-17-07-21-success.log",
+            "hash": "3028cce3f753987b394f9b8afa8442d7af06b30e476b421bde6ba98c398a273a"
+        },
+        {
+            "date": 1689609704719,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-17-07-22-success.log",
+            "hash": "b2631a0a7f683119e5225dd17c009d3ab8ca1a1739fc412730370effc9544590"
+        },
+        {
+            "date": 1689613316117,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-17-07-23-success.log",
+            "hash": "8bc7632a800cabefcf43408ee211f1658d4d5cdb3f5ff4aef9036d0506be3c45"
+        },
+        {
+            "date": 1689616867517,
+            "name": "E:\\Next Level\\mission 3\\Uni-management-auth-service\\logs\\winston\\successes\\phu-2023-18-07-00-success.log",
+            "hash": "d010337bcc35a89c9f023d327324981aecb3a663edadc8959178a04fbf8667d0"
+        }
+    ],
+    "hashType": "sha256"
+}
