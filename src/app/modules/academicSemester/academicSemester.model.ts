@@ -1,4 +1,3 @@
-import { NextFunction } from "express";
 import { Schema, model, connect, Model } from "mongoose";
 import {
   AcademicSemesterModel,
@@ -9,8 +8,8 @@ import {
   academicSemesterMonths,
   academicSemesterTitles,
 } from "./academicSemester.constant";
-import status from "http-status";
 import ApiError from "../../../errors/ApiError";
+import httpStatus from "http-status";
 
 const academicSemesterSchema = new Schema<IAcademicSemester>(
   {
@@ -47,7 +46,7 @@ academicSemesterSchema.pre("save", async function (next) {
     year: this.year,
   });
   if (isExist) {
-    throw new ApiError(status.CONFLICT, "Academic Semester already exists");
+    throw new ApiError(httpStatus.CONFLICT, "Academic Semester already exists");
   }
   next();
 });
