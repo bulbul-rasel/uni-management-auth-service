@@ -1,11 +1,12 @@
 import { ErrorRequestHandler, NextFunction, Request, Response } from "express";
 import config from "../../config";
-import { IGenericErrorMassages } from "../../interfaces/error";
+import { IGenericErrorMassage } from "../../interfaces/error";
 import handleValidationError from "../../errors/handleValidationError";
 import ApiError from "../../errors/ApiError";
 import { errorlogger } from "../../shared/logger";
 import { ZodError } from "zod";
 import { handleZodError } from "../../errors/handleZodError";
+import handleCastError from "../../errors/handleCastError";
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
   config.env === "development"
@@ -14,10 +15,15 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
 
   let statusCode = 500;
   let message = "Something Went wrong";
-  let errorMessages: IGenericErrorMassages[] = [];
+  let errorMessages: IGenericErrorMassage[] = [];
 
   if (error?.name === "ValidationError") {
     const simplifiedError = handleValidationError(error);
+    statusCode = simplifiedError.statusCode;
+    message = simplifiedError.message;
+    errorMessages = simplifiedError.errorMessages;
+  } else if (error.name === "CastError") {
+    const simplifiedError = handleCastError(error);
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;
     errorMessages = simplifiedError.errorMessages;
