@@ -7,9 +7,9 @@ import { IAcademicSemester } from "../academicSemester/academicSemester.interfac
 import { IUser } from "./user.interface";
 
 const createUser: RequestHandler = catchAsync(
-  async (req: Request, res: Response, next: NextFunction) => {
+  async (req: Request, res: Response) => {
     const { user } = req.body;
-    const result = UserService.createUser(user);
+    const result = await UserService.createUser(user);
 
     sendResponse<IUser>(res, {
       statusCode: httpStatus.OK,
@@ -17,8 +17,6 @@ const createUser: RequestHandler = catchAsync(
       message: "User created successfully",
       data: result,
     });
-
-    next();
   }
 );
 
