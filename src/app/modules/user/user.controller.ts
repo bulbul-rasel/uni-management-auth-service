@@ -6,10 +6,10 @@ import httpStatus from "http-status";
 import { IAcademicSemester } from "../academicSemester/academicSemester.interface";
 import { IUser } from "./user.interface";
 
-const createUser: RequestHandler = catchAsync(
+const createStudent: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
-    const { ...userData } = req.body;
-    const result = await UserService.createUser(userData);
+    const { student, ...userData } = req.body;
+    const result = await UserService.createStudent(student, userData);
 
     sendResponse<IUser>(res, {
       statusCode: httpStatus.OK,
@@ -21,5 +21,5 @@ const createUser: RequestHandler = catchAsync(
 );
 
 export const UserController = {
-  createUser,
+  createStudent,
 };
